@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>borgsearch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="container">
+        <a href="#" class="top-search">
+          <span class="borg">Borg</span>
+          <span class="search">search</span>
+        </a>
+        <a href="#borg-description" class="recipe">recipe</a>
+      </div>
+    </div>
+  </nav>
+  <p id="headline" class="headline">Generate your borg.</p>
+  
+  <div class="container">
+    <div class="vertical-center">
+      <button class="mainbutton" onclick="borgOn()">LET'S BORG</button>
+    </div>
+  </div>
+  `
+  <p id="borg-name"class="borgname"></p>
+  <div class="description-container">
+    <div class="headline2"><h1>What is a borg?</h1></div>
+    <p id="borg-description" class="description">BORG stands for <span class="B">B</span>lack <span class="O">O</span>ut <span class="R">R</span>age <span class="G">G</span>allon. It is the cocktail of the gods. Typically, one BORGS by using a gallon jug that is half full with water. Pour in a small handle of Tito's (750 mL) s or a vodka of your choice. Then pour in 2 packets of Mio (1.62 oz each)</p>
+  </div>
+  
+  <div id="container3" class="container3">
+    <span class ="stat1">50%</span>
+    <div class="d1">water</div>
+      <span class ="stat1">50%</span>
+      <div class="d1">vodka</div>
+      <div class="miopacks">2 <span class="mio1">Mio</span> Packs</div>
+  </div>
+  <div class="rankings">
+    <h1 class="mioRank">Get a Random Mio flavor</h1>
+    <p id="mioflavor" class="mioflavor"></p>
+    <div class="container">
+      <div class="vertical-center">
+        <button id="mioBtn" class="mioButton" onclick="mioOn()">MIO</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <!--include borg recipe!!-->
+</body>
+</html>
