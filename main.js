@@ -8,6 +8,7 @@ let borgs = [
     "Borgilicious",
     "Borghilda",
     "Borger King",
+    "Smorgasborg",
     "Ruth Bader-Ginsborg",
     "Borgeioise",
     "Borgan Freeman",
