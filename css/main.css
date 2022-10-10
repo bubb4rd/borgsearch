@@ -270,3 +270,16 @@
       .warningtitle {
         text-align: center;
       }
+      .hype {
+        font-weight: 500;
+        color: white;
+      }
+      .responsible {
+        text-align: center;
+        color: yellow;
+        font-style: italic;
+        font-family: "Bebas Neue";
+        font-weight: 800;
+        font-size: 2.5em;
+        padding: 15px 15px;
+      }
