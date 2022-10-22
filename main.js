@@ -78,12 +78,44 @@ let mio = [
 "Green Thunder",
 "Lemon Lime"
 ];
-function borgOn() {
+function generateBorg() {
     var borg = borgs[Math.floor(Math.random()*borgs.length)];
     borgname.innerHTML = borg;
 }
 
 function mioOn() {
-    var mios = mio[Math.floor(Math.random() * mio.length )]
-    document.getElementById("mioflavor").innerHTML = mios;
+    var mios = mio[Math.floor(Math.random() * mio.length )];
+    document.getElementById("mio-name").innerHTML = mios;
 }
+
+
+window.addEventListener("scroll", function() {
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function() {
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+function dropDown() {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
+window.onscroll = () => {
+	menu.classList.remove('bx-x');
+	navbar.classList.remove('active');
+};
+
+const sr = ScrollReveal ({
+	distance: '25px',
+	duration: 2500,
+	reset: true
+})
+
+sr.reveal('.home-text',{delay:190, origin:'bottom'})
+
+sr.reveal('.borg,.recipe,.mio',{delay:200, origin:'bottom'});
