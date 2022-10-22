@@ -4,60 +4,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>borgsearch</title>
+  <title>borgwithus</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@600;700&family=PT+Sans:ital@1&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <nav>
-    <div class="navbar">
-      <div class="container">
-        <a href="index.html" class="top-search">
-          <span class="borg">Borg</span>
-          <span class="search">search</span>
-        </a>
-        <ul><a href="#borg-description" class="recipe">recipe</a></ul>
-        
+  <header>
+    <a href="#" class="logo"><i class='bx bxs-beer'></i><span>borgwithus</span></a>
+    <div class="bx bx-menu" id="menu-icon" onclick="dropDown()"></div>
+    <ul class="navbar">
+      <li><a href="#desc">Borg</a></li>
+      <li><a href="#recipe">Recipe</a></li>
+      <li><a href="#">Mio</a></li>
+    </ul>
+  </header>
+  <section class="borg" id="borg">
+      <div class="borg-text">
+        <h1>Generate</h1>
+        <h2>your borg.</h2>
+        <p>Take your <span>BORG</span>ing to new limits with our borg name generator!</p>
+      </div>
+      <div class="borg-button">
+        <a href="#gen" class="btn">Let's Borg</a>
+      </div>
+      <img src="/images/borgwithus.png" alt="">
+     
+  </section>
+  <section class="desc" id="desc">
+      <div class="desc-text">
+        <h1>What is a borg?</h1>
+        <p><i class='bx bxs-drink'></i><br><span>BORG</span> stands for <span>B</span>lack <span>O</span>ut <span>R</span>age <span>G</span>allon. It is the cocktail of the gods. Typically, one BORGS by using a gallon jug that is half full with water.</p>
+        <div class="steps-container">
+          <p class="steps"><span>1</span><br> Fill a gallon plastic jar halfway.</p>
+          <p class="steps"><span>2</span><br> Pour in a small handle of Tito's (750 mL) s or a vodka of your choice.</p>
+          <p class="steps"><span>3</span><br> Pour in 2 packets of Mio (1.62 oz each)</p>
+        </div>
+      </div>
+  </section>
+  <section class="recipe" id="recipe">
+    <div class="recipe-text">
+      <h1>How to borg:</h1>
+    </div>
+    <div class="recipe-boxes">
+      <div class="box">
+        <i class='bx bxs-coffee-togo'></i> <br>
+        50% Water
+      </div>
+      <div class="box">
+        <i class='bx bxs-drink'></i> <br>
+        50% Vodka
+      </div>
+      <div class="box">
+        <i class='bx bxs-eject'></i><br>
+        2 Mio Packs
       </div>
     </div>
-  </nav>
-  <p id="headline" class="headline">Generate your borg.</p>
-  
-  <p id="title1" class="title1">'Tis the season to be borging!</p>
-  <div class="container">
-    <div class="vertical-center">
-      <button class="mainbutton" onclick="borgOn()">LET'S BORG</button>
+    <h1 class="disclaimer">PLEASE DRINK RESPONSIBLY</h1>
+  </section>
+  <section class="gen" id="gen">
+    <div class="generate-text">
+      <h1>Let's <span>borg</span>.</h1>
+      <button class="borg-gen" id="borg-gen" onclick="generateBorg()">BORG!</button>
     </div>
-  </div>
-  <p id="borg-name"class="borgname"></p>
-  <div class="description-container">
-    <div class="headline2"><h1>What is a borg?</h1></div>
-    <p id="borg-description" class="description">BORG stands for <span class="B">B</span>lack <span class="O">O</span>ut <span class="R">R</span>age <span class="G">G</span>allon. It is the cocktail of the gods. Typically, one BORGS by using a gallon jug that is half full with water. Pour in a small handle of Tito's (750 mL) s or a vodka of your choice. Then pour in 2 packets of Mio (1.62 oz each)</p>
-  </div>
-  
-  <div id="container3" class="container3">
-    <span class ="stat1">50%</span>
-    <div class="d1">water</div>
-      <span class ="stat1">50%</span>
-      <div class="d1">vodka</div>
-      <div class="miopacks">2 <span class="mio1">Mio</span> Packs</div>
-      <div class="responsible">Please drink responsibly.</div>
+    <div class="borg-container">
+      <p class="borg-name" id="borg-name"></p>
     </div>
-  <div class="rankings">
-    <h1 class="mioRank">Get a Random Mio flavor</h1>
-    <p id="mioflavor" class="mioflavor"></p>
-    <div class="container">
-      <div class="vertical-center">
-        <button id="mioBtn" class="mioButton" onclick="mioOn()">MIO</button>
-      </div>
+  </section>
+  <section class="mio" id="mio">
+    <h2>Need some <span>Mio?</span></h2>
+    <h3>We got you.</h3>
+    <button class="mioBTN" id="mioBTN" onclick="mioOn()">MIO</button>
+    <div class="mio-container">
+      <p class="mio-name" id="mio-name"></p>
     </div>
-  </div>
-  <p class="warningtitle"><span class="warning"> GOVERNMENT WARNING: </span></p>
-  <p class="warninglabel">(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems. <span class="hype">You must be over the age of 21 to drink alcohol.</span></p>
-  
-  <footer class="footer"><a class="footerlink" href="https://instagram.com/bubbardi">Bo Hubbard 2022</a></footer>
+  </section>
+  <section class="warning" id="warning">
+    <h1>GOVERNMENT WARNING:</h1>
+    <div class="warning-text">
+     <span>(1)</span> According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. <br> <span>(2)</span> Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems. You must be over the age of 21 to drink alcohol.
+    </div>
+  </section>
   <script src="main.js"></script>
   <!--include borg recipe!!-->
 </body>
